@@ -22,7 +22,10 @@ public class NhanVienFullTime extends NhanVien {
 		return "Nhan vien full time";
 	}
 	public void tinhLuong() {
-		luong = Configs.LUONG_NHAN_VIEN_FULL_TIME_LINH + this.ngayLamThem * Configs.LUONG_LAM_THEM_MOI_NGAY;
-		luong = Configs.LUONG_NHAN_VIEN_FULL_TIME_SEP + this.ngayLamThem + Configs.LUONG_LAM_THEM_MOI_NGAY;
+		if (Configs.NHAN_VIEN_LINH == this.loaiChucVu) {
+			luong = Configs.LUONG_NHAN_VIEN_FULL_TIME_LINH + this.ngayLamThem * Configs.LUONG_LAM_THEM_MOI_NGAY;
+		}else {
+			luong = Configs.LUONG_NHAN_VIEN_FULL_TIME_SEP + this.ngayLamThem * Configs.LUONG_LAM_THEM_MOI_NGAY;
+		}
 	}
 }
