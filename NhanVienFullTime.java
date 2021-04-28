@@ -18,7 +18,7 @@ public class NhanVienFullTime extends NhanVien {
 	public void setLoaiChucVu(int loaiChucVu) {
 		this.loaiChucVu = loaiChucVu;
 	}
-	public String loaiNhanVien() {
+	public String LoaiNhanVien() {
 		return "Nhan vien full time";
 	}
 	public void tinhLuong() {
